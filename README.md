@@ -4,7 +4,7 @@ This module provides a logging facility.
 
 ## Getting Started
 
-In order to get started, run `npm add @giggleaway/giggle-logger`.
+In order to get started, run `yarn add @giggleaway/giggle-logger`.
 
 This needs to be initialized in the entry point of the application using:
 
@@ -76,12 +76,12 @@ This middleware initializes the request based store which is used by the request
 
 ### Build
 
-To build the project use `npm build`.
+To build the project use `yarn build`.
 
 ### Testing
 
-The package uses with `Jest`. Use `npm test` to run all tests.
+The package uses with `Jest`. Use `yarn test` to run all tests.
 
 ### Linting
 
-The package uses with `ESLint`. Use `npm lint` to execute linting.
+The package uses with `ESLint`. Use `yarn lint` to execute linting.

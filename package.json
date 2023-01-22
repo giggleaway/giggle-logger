@@ -1,22 +1,23 @@
 {
-  "name": "@giggleaway/giggle-logger",
-  "version": "1.0.0",
-  "description": "Logging library for giGGle's APIs",
-  "main": "dist/index.js",
-  "repository": "https://github.com/giggleaway/giggle-logger.git",
   "author": "giGGle",
+  "description": "Logging library for giGGle's APIs",
   "license": "UNLICENSED",
+  "main": "dist/index.js",
+  "name": "@giggleaway/giggle-logger",
   "private": false,
+  "repository": "https://github.com/giggleaway/giggle-logger.git",
+  "types": "dist/index.d.ts",
+  "version": "1.0.0",
   "scripts": {
+    "build": "tsc",
+    "bootstrap": "bash scripts/bootstrap.sh",
+    "lint": "eslint lib/**/*",
+    "lint:fix": "yarn lint --fix",
+    "prepare": "husky install",
+    "prepublishOnly": "yarn build",
     "test": "jest",
     "test:cov": "jest --coverage",
-    "test:watch": "jest --watch",
-    "build": "tsc",
-    "prepublishOnly": "npm build",
-    "prepare": "husky install",
-    "lint": "eslint lib/**/*",
-    "lint:fix": "npm lint --fix",
-    "bootstrap": "bash scripts/bootstrap.sh"
+    "test:watch": "jest --watch"
   },
   "dependencies": {
     "@nestjs/common": "^9.2.1",
@@ -56,5 +57,5 @@
   "lint-staged": {
     "*.{js,jsx,ts,tsx,css,scss,jso,md}": "prettier --write"
   },
-  "packageManager": "npm@8.19.3"
+  "packageManager": "yarn@1.22.19"
 }
