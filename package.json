@@ -20,7 +20,7 @@
     "test:watch": "jest --watch"
   },
   "publishConfig": {
-    "registry":"https://npm.pkg.github.com/@giggleaway"
+    "registry":"https://npm.pkg.github.com/"
   },
   "dependencies": {
     "@nestjs/common": "^9.2.1",

@@ -63,3 +63,5 @@ jobs:
 
       - name: Publish package to github
         run: yarn publish
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
