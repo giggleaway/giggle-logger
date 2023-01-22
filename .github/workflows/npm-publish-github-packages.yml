@@ -4,6 +4,9 @@ on:
   release:
     types: [created]
 
+env:
+  NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
+
 jobs:
   build:
     runs-on: ubuntu-latest
