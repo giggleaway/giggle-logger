@@ -19,6 +19,9 @@
     "test:cov": "jest --coverage",
     "test:watch": "jest --watch"
   },
+  "publishConfig": {
+    "registry":"https://npm.pkg.github.com/@giggleaway"
+  },
   "dependencies": {
     "@nestjs/common": "^9.2.1",
     "cls-hooked": "^4.2.2",
