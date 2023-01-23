@@ -56,10 +56,10 @@ jobs:
         run: yarn test
 
       - name: Build from typescript
-        run: yarn build
-
-      - name: Create .npmrc file
-        run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ~/.npmrc
+        run: yarn prepublishOnly
+      
+      - name: output files in dir
+        run: ls dist/
 
       - name: Publish package to github
         run: yarn publish
