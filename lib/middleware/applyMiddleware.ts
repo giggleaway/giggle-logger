@@ -1,5 +1,4 @@
 import { MiddlewareConsumer, RequestMethod } from '@nestjs/common';
-
 import {
   loggerMiddleware,
   requestIdempotencySetter,

@@ -5,3 +5,5 @@ coverage
 # Environment files
 *.env
 *.*.env
+
+yarn-error.log
