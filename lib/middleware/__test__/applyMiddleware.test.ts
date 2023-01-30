@@ -100,7 +100,7 @@ test('When middleware is connected with applyMiddleware returns different status
   const response = await getTestApplication(
     '/',
     'GET',
-    (_req: Request, res: Response, next: NextFunction) => {
+    (_req: Request, _res: Response, next: NextFunction) => {
       next();
       throw new BadRequestException();
     },
