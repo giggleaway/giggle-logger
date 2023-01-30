@@ -1,4 +1,4 @@
-name: Node.js Package
+name: Publish npm package 
 
 on:
   release:
@@ -60,11 +60,6 @@ jobs:
 
       - name: Create .npmrc file
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ~/.npmrc
-
-      - name: Create a new package version
-        run: git config user.email "hariveturi@gmail.com" && git config user.name "bitsatebyte" && yarn version --minor
-        env:
-          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Publish package to github
         run: yarn publish
