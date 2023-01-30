@@ -61,6 +61,9 @@ jobs:
       - name: Create .npmrc file
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ~/.npmrc
 
+      - name: Create a new package version
+        run: yarn version
+
       - name: Publish package to github
         run: yarn publish
         env:
