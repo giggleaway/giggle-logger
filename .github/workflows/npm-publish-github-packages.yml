@@ -63,6 +63,8 @@ jobs:
 
       - name: Create a new package version
         run: yarn version --minor
+        env:
+          NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
       - name: Publish package to github
         run: yarn publish
