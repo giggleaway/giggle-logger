@@ -62,7 +62,7 @@ jobs:
         run: echo "//registry.npmjs.org/:_authToken=${{secrets.NPM_TOKEN}}" >> ~/.npmrc
 
       - name: Create a new package version
-        run: yarn version --minor
+        run: git config user.email "hariveturi@gmail.com" && git config user.name "giGGle" && yarn version --minor
         env:
           NODE_AUTH_TOKEN: ${{secrets.NPM_TOKEN}}
 
